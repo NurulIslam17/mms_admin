@@ -91,4 +91,9 @@ class RegisterController extends Controller
             ], 500);
         }
     }
+
+    public function logout(Request $request): JsonResponse
+    {
+        Auth::user()->tokens()->delete();
+    }
 }

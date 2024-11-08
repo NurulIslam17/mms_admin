@@ -7,7 +7,9 @@ use CostRepository;
 class CostService
 {
     protected $costRepository;
-    public function __construct(CostRepository $costRepository) {}
+    public function __construct(CostRepository $costRepository) {
+        $this->costRepository = $costRepository;
+    }
 
     public function getAllCost($request)
     {

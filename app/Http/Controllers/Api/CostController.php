@@ -10,7 +10,10 @@ class CostController extends Controller
 {
 
     protected $costService;
-    function __construct(CostService $costService) {}
+    function __construct(CostService $costService)
+    {
+        $this->costService = $costService;
+    }
 
     public function index(Request $request)
     {
